@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+<title>Login</title>  
+<link rel="stylesheet" href="web.css">
+
+</head>
+<body>
+    
+    <div class="container" style="background-color: rgb(222, 162, 180);">
+        <nav 
+        <center>
+            <div class="topnav">
+                <a href="login.html">Login</a>
+            </div>
+        
+        </center>
+
+        <form class="container shadow" >
+            <center> 
+                <h3>Sign Up</h3>
+                
+            </center>
+            <center>
+                
+                <br> 
+                <br> 
+                <input type="text" name="username" id="name" placeholder="username" required class="name-int">
+                <br> 
+                <br> 
+                
+                <input type="password" name="password" id="pass1" placeholder="Passcode"required  class="name-int">
+                
+                <br> 
+                <br> 
+                <input type="password" name="++password" id="pass2" placeholder="Passcode"required  class="name-int">
+                <br> 
+                <br> 
+                <input type="email" name="email" id="em" placeholder="Email"required class="name-int">
+                
+                <br> 
+                <br> 
+                <input type="number" name="number" id="no" placeholder="Mobile Number"required class="name-int">
+                
+                <br> 
+                <br> 
+                <input type="date" name="date" id="dt" placeholder="Mobile Number"required  class="name-int">
+                <br>
+                <br>
+            
+                <br> 
+                <br> 
+                <br> 
+                <br> 
+                <button type="submit" onclick="condition()" onclick="window.location.href='https://open.spotify.com/?';" class="button">Register</button>
+                <br>
+                <br>
+        </form>
+    </div>
+</div>
+</body>
+<script>
+    function condition()
+    {
+        let x1=document.getElementById("pass1").value;
+        let x2=document.getElementById("pass2").value;
+        if(confirm("Are you sure?")){
+
+            if(x1==x2)
+            {
+                alert("Password Matched");
+            }
+            else
+            {
+                alert("Password Mismatch");
+            }
+        }
+    }
+    </script>
+    </html>
