@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    font-size: 2rem;
+    font-weight: 600;
+    position: fixed;
+    overflow: hidden;
+    background-image: url("https://images.pexels.com/photos/7727848/pexels-photo-7727848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat:no-repeat;
+    background-size:70%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    background-size: cover;
+}
+
+.navlinks
+{
+    justify-content: right;
+    display: flex;
+}

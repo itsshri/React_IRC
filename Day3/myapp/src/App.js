@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
+import Home from "./Components/Home";
+// import Img1 from "./Components/Img/tfui.jpg";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(){
+  return(
+    <div>
+    {/* <img src={Img1} alt="myimage"/> */}
+      <Nav/>
+      <Footer/>
+      <Home/>
+      <p>
+        Welcome to Wallpaper gen!
+      </p>
+      <p>
+   
+      </p>
+      </div>
+  )
 }
 
 export default App;

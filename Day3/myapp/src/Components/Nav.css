@@ -1,0 +1,23 @@
+.navbar{
+    height:5rem;
+    width:100vw;
+    background-color: rgb(170, 254, 254);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 2rem;
+    font-weight: 600;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.nav-links{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+    text-decoration: none;
+}
