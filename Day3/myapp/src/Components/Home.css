@@ -1,20 +1,123 @@
-body{
-    display: flex;
-    font-size: 2rem;
-    font-weight: 600;
-    position: fixed;
-    overflow: hidden;
-    background-image: url("https://images.pexels.com/photos/7727848/pexels-photo-7727848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat:no-repeat;
-    background-size:70%;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    background-size: cover;
-}
+*{
+    padding:0;
+    margin:0;
+  }
 
-.navlinks
-{
-    justify-content: right;
-    display: flex;
-}
+  
+  .main{
+    background-color: black;
+    background-image:url(https://media.istockphoto.com/id/1001928116/photo/empty-vintage-seat-in-auditorium-or-theater-with-lights-on-stage.jpg?s=2048x2048&w=is&k=20&c=Zo8sF9isjA5LrooRFEREH8TXtojzcGVTf1GDoIdW3fc=);
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:center center;
+    box-sizing:border-box;
+    font-family: 'Andika', sans-serif;
+   
+    
+  }
+  .main:before{
+    content:'';
+    background-color:rgb(0 0 0 / 0.7);
+    position:absolute;
+    height:80%;
+    width:100%;
+    left:0;
+    top:2.8rem;
+  }
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'Julius Sans One', sans-serif;
+    margin-bottom:20px;
+  }
+  .container{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    z-index:2;
+    height:100vh;
+    
+  }
+  .container .card{
+    vertical-align:top;
+    width:280px;
+    height:450px;
+    position:relative;
+    margin:30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.8);
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(233, 58, 169, 0.3) 0px 10px, rgba(255, 0, 162, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    border-radius:25px;
+    background-color:rgba(255,255,255, 0.1);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    text-align:center;
+  }
+  .card .content{
+    padding:20px;
+    transition:0.8s all ease;
+    color:#ccc;
+    transform:translateY(200px);
+    opacity:0;
+  }
+  .card:hover .content{
+    transform:translateY(0px);
+    opacity:1;
+  }
+  .card img{
+    position:absolute;
+    width:280px;
+    top:0px;
+   
+  }
+  h1{
+    color:#fff;
+    text-align:center;
+    z-index:9;
+    position:relative;
+    margin-bottom:-20px;
+    padding-bottom:0;
+    padding-top:20px;
+    font-weight:400;
+  }
+  .card .content h2{
+    color:#fff;
+    font-weight:400;
+  }
+  .card .content a{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    padding:8px 30px 11px;
+    border:2px solid #fff;
+    text-transform:uppercase;
+    color:#fff;
+    border-radius:20px;
+    box-shadow: 0px 5px 50px rgba(0,0,0,0.8);
+    transition:0.8s all ease;
+  }
+  .card .content a:hover{
+    background: #ff9900;
+  }
+
+  .zoom {
+    padding: 50px;
+    background-color: green;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+  .font{
+    text-decoration: double;
+    color: rgb(255, 255, 255);
+  }

@@ -1,7 +1,6 @@
 import Nav from "./Components/Nav";
-import Footer from "./Components/Footer";
 import Home from "./Components/Home";
-// import Img1 from "./Components/Img/tfui.jpg";
+import load from "./Components/load";
 
 
 function App(){
@@ -9,10 +8,9 @@ function App(){
     <div>
     {/* <img src={Img1} alt="myimage"/> */}
       <Nav/>
-      <Footer/>
       <Home/>
+      <load/>
       <p>
-        Welcome to Wallpaper gen!
       </p>
       <p>
    
