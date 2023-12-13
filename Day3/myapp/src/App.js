@@ -1,6 +1,6 @@
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
-import load from "./Components/load";
+
 
 
 function App(){

@@ -5,8 +5,8 @@
 
   
   .main{
-    background-color: black;
-    background-image:url("https://media.istockphoto.com/id/1351540956/photo/train-crossing-bridge-switzerland.jpg?s=2048x2048&w=is&k=20&c=IMvV7zXfq4byZRchGUM3J82bK7Cd6lNpprc7PIKWRRg=");
+    background-color: rgb(0, 0, 0);
+    background-image:url(https://media.istockphoto.com/id/1351540956/photo/train-crossing-bridge-switzerland.jpg?s=2048x2048&w=is&k=20&c=IMvV7zXfq4byZRchGUM3J82bK7Cd6lNpprc7PIKWRRg=);
     background-attachment:fixed;
     background-size:cover;
     background-position:center center;
@@ -41,7 +41,7 @@
   .container .card{
     vertical-align:top;
     width:280px;
-    height:450px;
+    height:320px;
     position:relative;
     margin:30px;
     box-shadow: 20px 20px 50px rgba(0,0,0,0.8);
@@ -68,7 +68,7 @@
   }
   .card img{
     position:absolute;
-    width:280px;
+    width:460px;
     top:0px;
    
   }
@@ -121,3 +121,18 @@
     text-decoration: double;
     color: rgb(255, 255, 255);
   }
+
+  .title{
+    font-family:serif;
+    font-weight: 400;
+    font-style: oblique;
+    color:antiquewhite;
+  }
+  .title{
+    font-family:serif;
+    font-weight: 400;
+    font-style: oblique;
+    color:antiquewhite;
+  }
+
+  
