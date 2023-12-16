@@ -1,0 +1,26 @@
+.App
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding: 12px 32px; 
+    background-image: url("https://unsplash.com/photos/light-bulb-WsEbnsnKbUE");
+}
+body{
+    background-size: cover;
+    padding: 12px 32px; 
+    background-color:burlywood;
+}
+button{
+    padding: 12px 32px;
+    
+    border-radius: 15px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content:center;
+     outline: none;
+}
