@@ -7,12 +7,12 @@
     align-items: center;
     padding-top: 60px;
     padding: 12px 32px; 
-    background-image: url("https://unsplash.com/photos/light-bulb-WsEbnsnKbUE");
 }
 body{
     background-size: cover;
     padding: 12px 32px; 
     background-color:burlywood;
+    background-image: url("https://wallpapercave.com/wp/wp4793276.jpg");
 }
 button{
     padding: 12px 32px;

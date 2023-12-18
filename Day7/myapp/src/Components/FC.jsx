@@ -14,7 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
     return (
       <div>
-        <button onClick={notify}>Send me a Notification📜</button>
+        <button onClick={notify}>jj📜</button>
         <button onClick={notify1}>Say Hi to a Stranger✋</button>
         <ToastContainer />
       </div>

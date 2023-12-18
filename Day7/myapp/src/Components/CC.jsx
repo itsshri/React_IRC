@@ -2,7 +2,7 @@ import React from 'react'
 import { Component } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 //HOT TOAST
-const notify = () => toast.success('Bread is being Toasted🥪',
+const notify = () => toast.success('Bread is 🥪',
 {
     theme:"dark"
 });
@@ -11,7 +11,7 @@ class CC extends Component{
         return(
             <>
 <div>
-      <button onClick={notify}>A Toast please🍞!</button>
+      <button onClick={notify}>How is my life?</button>
       <Toaster />
     </div>
             </>
