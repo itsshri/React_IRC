@@ -1,0 +1,127 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-right: 10px;
+  z-index: -1; /* Place the video behind other content */
+}
+
+.mains{
+  background-color: rgb(0, 0, 0);
+  /* background-image:url(https://images.unsplash.com/photo-1583121358977-98c0a70698b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80); */
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:center center;
+  box-sizing:border-box;
+  font-family: 'Andika', sans-serif;
+  position: relative;
+  margin-top: -30px;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Julius Sans One', sans-serif;
+  margin-bottom:20px;
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+.containers{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  z-index:2;
+  height:100vh;
+}
+.containers .cards{
+  vertical-align:top;
+  width:300px;
+  height:400px;
+  position:relative;
+  margin:30px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.8);
+  border-radius:25px;
+  background-color:rgba(255, 255, 255, 0.1);
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.contents{
+  
+  align-items: center;
+}
+.cards .contents{
+  padding:0px;
+  transition:0.8s all ease;
+  color:#ccc;
+  transform:translateY(200px);
+  opacity:1;
+  
+}
+.cards:hover .contents{
+  transform:translateY(1px);
+  opacity:1;
+
+}
+.cards img{
+  position:absolute;
+  width:960px;
+  top:0px;
+  opacity: 1.2;
+
+}
+h1{
+  color:rgb(255, 255, 255);
+  text-align:center;
+  z-index:9;
+  position:relative;
+  margin-bottom:30px;
+  padding-top:0px;
+  padding-bottom:-20px;
+  font-weight:400;
+}
+.cards .contents h2{
+  color:#fff;
+  font-weight:400;
+}
+.cards .contents a{
+  display:inline-block;
+  margin-top:20px;
+  text-decoration:none;
+  padding:8px 30px 11px;
+  border:2px solid #fff;
+  text-transform:uppercase;
+  color:rgb(251, 251, 251);
+  border-radius:50px;
+  box-shadow: 0px 5px 50px rgba(0,0,0,0.8);
+  transition:0.8s all ease;
+}
+.cards .contents a:hover{
+  background: #9C27B0;
+}
+
+.caps
+{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-weight: 400;
+  color: rgb(255, 172, 172);
+}
+
+
+
+@media only screen and (max-width:900px) {
+  .containers{
+    display:block;
+  }
+}
