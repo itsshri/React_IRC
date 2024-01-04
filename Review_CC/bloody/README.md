@@ -71,10 +71,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 *LOG IN
 <img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-21%20021753.png">
 *PAGE 1
-<img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091056.png">
+<img src="C:\Users\Shrijith\Pictures\Screenshots\Screenshot 2023-12-21 021753.png">
 *PAGE 2
-<img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091243.png">
+<img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091056.png">
 *PAGE 3
-<img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091221.png">
+<img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091243.png">
+
 
 
