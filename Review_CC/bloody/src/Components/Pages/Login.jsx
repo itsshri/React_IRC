@@ -2,6 +2,7 @@ import '../Styles/Login.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Pages/Footer';
+import {Toaster,toast} from 'react-hot-toast';
 const Login=()=>
 {
     const navigate = useNavigate();
@@ -9,13 +10,14 @@ const Login=()=>
         let a = document.getElementById("name").value;
         let b = document.getElementById("password").value;
         if (a !== "shri" && b !== "shri123") {
-            alert("UserName and Password Invalid");
+            // alert("UserName and Password Invalid");
         } else if (a !== "shri") {
             alert("UserName Invalid!!");
+            toast.success('Successfully toasted!')
         } else if (b !== "shri123") {
             alert("Password Invalid");
         }
-        else if(a=="shri" && b=="shri123")
+        else if(a==="shri" && b==="shri123")
         {
             navigate('/home');
         }
@@ -84,8 +86,15 @@ const Login=()=>
             </div>
 
         </section>
+        <Toaster
+  position="bottom-right"
+  reverseOrder={false}
+/>
         </>
+        
     )
 }
+
+
 
 export default Login;

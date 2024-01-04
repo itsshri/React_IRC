@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/About.css';
-import Footer from './Footer';
+
 import Navbar from './Navbar';
  
 const About = () => {
@@ -19,11 +19,11 @@ const About = () => {
           <p className="text-blk description">
           Our tourism page is your passport to an unforgettable Swiss adventure, providing a curated guide to the country's wonders, activities, and hidden gems that make Switzerland a truly timeless destination. Join us on a virtual journey through Switzerland's scenic wonders and start planning your next unforgettable escape.
           </p>
-          <a href="#">
+         
             <button className="explore">
               Thank You for Visiting our Page!❤️
             </button>
-          </a>
+          
         </div>
         <div className="videoContainer">
            {/* <video width="2048" height="1365"  className="video-background" autoPlay loop muted>

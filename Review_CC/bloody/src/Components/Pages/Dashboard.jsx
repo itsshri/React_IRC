@@ -14,7 +14,7 @@ const Dashboard= () => {
           <ul>
 
             <Link to="/Signup">
-            <li><a href="#">Register</a></li>
+            <li>Register</li>
             </Link>
             
           
@@ -22,7 +22,7 @@ const Dashboard= () => {
           <ul>
 
             <Link to="/">
-            <li><a href="#">Logout 📤</a></li>
+            <li>Logout 📤</li>
             </Link>
           </ul>
             
