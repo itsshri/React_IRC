@@ -1,151 +1,97 @@
-import { useRef, useState } from 'react';
+import React, { useState } from 'react';
+import {Toaster,toast} from 'react-hot-toast';
 import './Form.css';
+
 const Form = () => {
-    const [visible, setVisible] = useState(false);
-    const toggle = () => {
-        setVisible(!visible);
-    };
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
 
-    const username = useRef(null);
-    const email = useRef(null);
-    const password = useRef(null);
-    const confirmpassword = useRef(null);
-    const phone = useRef(null);
-    const age = useRef(null);
+  const [errors, setErrors] = useState({
+    username: '',
+    password: '',
+  });
 
-    const [errors, setErrors] = useState({
-        username: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        phone: '',
-        age: ''
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { ...errors };
+
+    if (formData.username.trim() === '') {
+      newErrors.username = 'Username is required';
+      isValid = false;
+    } else {
+      newErrors.username = '';
+    }
+
+    if (formData.password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
+      isValid = false;
+    } else {
+      newErrors.password = '';
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      // Perform form submission logic (e.g., API call, authentication, etc.)
+      console.log('Form submitted:', formData);
+      toast.success('Login Successful !')
+    } else {
+      // Display validation errors to the user
+      console.log('Form validation failed');
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     });
+  };
 
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className="background">
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        {errors.username && <div className="error">{errors.username}</div>}
+      </div>
 
-    const Login = (e) => {
-        e.preventDefault();
-        console.log("Login clicked")
-        console.log(errors)
-        const data = {
-            username: username.current.value,
-            email: email.current.value,
-            password: password.current.value,
-            confirmpassword: confirmpassword.current.value,
-            phone: phone.current.value,
-            age: age.current.value,
-        };
-        // setErrors(data)
-        if (data.username.length === 0) {
-            setErrors({ ...errors, username: 'Username is empty!' });
-        } else if (data.username.length < 6) {
-            setErrors({ ...errors, username: 'Minimum 6 characters for username!' });
-        } else {
-            setErrors({ ...errors, username: '' });
-        }
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        {errors.password && <div className="error">{errors.password}</div>}
+      </div>
 
-        if (data.email.length === 0) {
-            setErrors({ ...errors, email: 'Email is empty!' });
-        } else if (!emailRegex.test(data.email)) {
-            setErrors({ ...errors, email: 'Invalid email format!' });
-        } else {
-            setErrors({ ...errors, email: '' });
-        }
+      <Toaster
+  position="bottom-center"
+  reverseOrder={false}
+/>
+      <center>
 
-        if (data.password.length === 0) {
-            setErrors({ ...errors, password: 'Enter the password!' });
-        } else if (data.password.length < 6) {
-            setErrors({ ...errors, password: 'Minimum 6 characters for password!' });
-        } else {
-            setErrors({ ...errors, password: '' });
-        }
-
-        if (data.confirmpassword !== data.password) {
-            setErrors({ ...errors, confirmpassword: 'Passwords do not match!' });
-        } else {
-            setErrors({ ...errors, confirmpassword: '' });
-        }
-        // if (data.phone.length === 0) {
-        //     setErrors({ ...errors, phone: 'Phone number is empty!' });
-        // } else if (data.phone.length !== 10) {
-        //     setErrors({ ...errors, phone: 'Phone number should be 10 digits!' });
-        // } else {
-        //     setErrors({ ...errors, phone: '' });
-        // }
-
-    };
-    return (
-        <>
-            <div>
-                <div className="navbar">
-                    <div className="navtitle">
-                        Hello world
-                    </div>
-                    <ul className="navlinks">
-
-                        <li>
-                            Home
-                        </li>
-
-                        <li>
-                            About
-                        </li>
-                        <li>
-                            Contact
-                        </li>
-                        <li onClick={toggle}>
-                            Login
-                        </li>
-                    </ul>
-                </div>
-                {visible ? (
-                    <div className='card-wrapper'>
-                        <div className="">
-                            <h2 className="auth-title">Login</h2>
-                            <form className="auth-container h-30v shadow" onSubmit={Login}>
-                                <input type="text" name="" id="username" placeholder="Username" className="auth-input" ref={username} />
-                                {
-                                    errors.username === '' ?
-                                        ''
-                                        :
-                                        <span className='error-comp'>
-                                            {errors.username}
-                                        </span>
-                                }
-                                <input type="email" name="" id="email" placeholder="email" className="auth-input" ref={email} />
-                                {
-                                    errors.email === '' ?
-                                        ''
-                                        :
-                                        <span className='error-comp'>
-                                            {errors.email}
-                                        </span>
-                                }
-                                <input type="password" name="" id="password" placeholder="Password" className="auth-input" ref={password} />
-                                {
-                                    errors.password == '' ?
-                                        ''
-                                        :
-                                        <span className='error-comp'>
-                                            {errors.password}
-                                        </span>
-                                }
-                                <input type="password" name="" id="confirmpassword" placeholder="ConfirmPassword" className="auth-input" ref={confirmpassword} />
-                                <input type="number" name="" id="phone" placeholder="Phone" className="auth-input" ref={phone} />
-                                <input type="number" name="" id="age" placeholder="Age" className="auth-input" ref={age} />
-                                <span className='btn-container'>
-                                    <button type="submit" className="auth-btn w-50">Login</button>
-                                    <button className='cancel-btn w-50' onClick={toggle}>Cancel</button>
-                                </span>
-                            </form>
-                        </div>
-                    </div>
-                ) : ('')
-                }
-            </div>
-        </>
-    )
-}
+      <button type="submit">Login</button>
+      </center>
+    </form>
+  );
+};
 
 export default Form;
