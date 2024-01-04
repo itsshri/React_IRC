@@ -76,6 +76,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091056.png">
 *PAGE 3
 <img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091243.png">
-
+*PAGE 4
+<img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091157.png">
+*PAGE 5
+<img src="https://github.com/itsshri/React_IRC/blob/main/Review_CC/bloody/src/CC2img/Screenshot%202023-12-22%20091221.png">
 
 
